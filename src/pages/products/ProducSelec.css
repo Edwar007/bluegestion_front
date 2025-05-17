@@ -1,0 +1,227 @@
+/* Contenedor principal de la lista de carrito */
+.cart-list {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%; /* Cambié a 100% para que no se desborde */
+  box-sizing: border-box;
+
+  /* Altura mínima para evitar que se achique y se amontonen los títulos */
+  min-height: 300px;
+}
+
+/* Encabezados de la lista de carrito */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  color: #2c3e50;
+}
+
+/* Ajustes en los títulos de las columnas del encabezado */
+.header-product {
+  flex: 3;
+  text-align: left;
+}
+
+.header-quantity {
+  flex: 2;
+  text-align: center;
+}
+
+.header-price {
+  flex: 1;
+  text-align: center;
+}
+
+.header-delete {
+  flex: 1;
+  text-align: right;
+}
+
+/* Área scrollable para las filas */
+.scrollable {
+  overflow-y: auto;
+  flex-grow: 1;
+  max-height: 300px; /* Altura máxima para scroll */
+  padding-right: 8px; /* para que scrollbar no tape contenido */
+  box-sizing: content-box;
+}
+
+/* Personalización scrollbar para Chrome */
+.scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+/* Elemento individual de producto */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #34495e;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+/* Flex para que las columnas mantengan proporciones */
+.cart-item > div {
+  /* Si quieres que cada parte tenga ancho flexible, asigna flex */
+}
+
+.cart-product-info {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-quantity {
+  flex: 2;
+  text-align: center;
+}
+
+.cart-price {
+  flex: 1;
+  font-weight: bold;
+  color: #27ae60;
+  font-size: 16px;
+  text-align: center;
+}
+
+.cart-delete {
+  flex: 1;
+  text-align: right;
+}
+
+/* Imagen de producto */
+.cart-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: contain;
+  background-color: #f9f9f9;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+/* Controles de cantidad (incremento / decremento) */
+.cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ecf0f1;
+  padding: 4px 8px;
+  border-radius: 8px;
+  justify-content: center;
+  height: 40px;
+  width: 90px;
+  flex-shrink: 0;
+}
+
+/* Botón de eliminar producto */
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #e74c3c;
+  padding: 6px;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  color: #c0392b;
+}
+
+/* Botones de incremento y decremento de cantidad */
+.cart-controls button {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.cart-controls .decrement {
+  background-color: #e74c3c;
+}
+
+.cart-controls .decrement:hover {
+  background-color: #c0392b;
+}
+
+.cart-controls .increment {
+  background-color: #2ecc71;
+}
+
+.cart-controls .increment:hover {
+  background-color: #27ae60;
+}
+
+/* Mensaje cuando no hay productos en el carrito */
+.empty-cart-message {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-style: italic;
+  font-size: 16px;
+  height: 150px; /* Para que ocupe espacio y no colapse */
+  text-align: center;
+}
+
+/* Resumen de la compra (total y checkout) */
+.cart-summary {
+  margin-top: 20px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Botón de checkout */
+.checkout-button {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+  background-color: #1e8449;
+}
+  

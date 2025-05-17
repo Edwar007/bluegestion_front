@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosario:wght@400;700&display=swap');
+
+.topbar {
+  background-color: #D9D9D9;
+  padding: 0px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  box-sizing: border-box;
+  overflow: visible;      
+  position: fixed;    
+  top: 20px;          
+  left: 100px;        
+  width: calc(100% - 100px);
+  z-index: 3000;       
+}
+
+.topbar::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 100px;
+  width: calc(100% - 100px);
+  height: 20px; /* mismo valor que top */
+  background-color: #D9D9D9;
+  z-index: 2999;
+}
+
+
+.page-title {
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  font-family: 'Rosario', sans-serif;
+  font-weight: 100; 
+}
+
+
+.user-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 9999;     
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+  text-align: right;
+}
+
+.role {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #000000;
+}
+
+.email {
+  font-size: 0.75rem;
+  color: #000000;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #363F4D;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 2000;
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown li:hover {
+  background-color: #2a2a40;
+}
+

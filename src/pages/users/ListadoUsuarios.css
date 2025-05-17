@@ -1,0 +1,102 @@
+.listado-usuarios-container {
+    padding: 0px 0% 0% 0%;
+}
+
+.filtros-barra {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 20px 0px;
+    flex-wrap: wrap;
+}
+
+.filtros-buscador {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.filtros-buscador input {
+    padding: 10px 32px 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    min-width: 230px;
+}
+
+.filtros-buscador i {
+    position: absolute;
+    right: 10px;
+    color: #888;
+}
+
+.filtro-item {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.exportar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.boton-agregar {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.tabla-contenedor {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+    max-height: calc(100vh - 180px);
+    margin-bottom: 30px;
+}
+
+.usuarios-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.usuarios-tabla th,
+.usuarios-tabla td {
+    text-align: left;
+    padding: 14px 12px;
+    font-size: 14px;
+    color: #000000;
+    word-wrap: break-word;
+}
+
+.usuarios-tabla thead th {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 2.5px solid #000000;
+}
+
+.usuarios-tabla tbody td {
+    border-bottom: 1.5px solid #333333;
+}
+
+.usuarios-tabla tbody tr:hover {
+    background-color: #e1e0e0;
+}
+
+.icono-borrar {
+    color: #d9534f;
+    cursor: pointer;
+}

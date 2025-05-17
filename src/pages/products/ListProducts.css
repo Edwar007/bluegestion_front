@@ -1,0 +1,248 @@
+/* === CONTENEDOR TABLA === */
+.tabla-contenedor {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 180px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* === TABLA DE PRODUCTOS === */
+.productos-tabla {
+    width: 100%;
+    min-width: 800px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+
+.productos-tabla th,
+.productos-tabla td {
+    padding: 12px;
+    font-size: 14px;
+    color: #000;
+    word-break: break-word;
+    text-align: left;
+}
+
+/* Encabezado */
+.productos-tabla thead th {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 2.5px solid #000;
+}
+
+/* Cuerpo */
+.productos-tabla tbody td {
+    border-bottom: 1.5px solid #333;
+}
+
+.productos-tabla tbody tr:hover {
+    background-color: #e1e0e0;
+}
+
+/* Columnas pequeñas: checkbox, estrella, eliminar */
+.productos-tabla th:nth-child(1),
+.productos-tabla td:nth-child(8),
+.productos-tabla th:nth-child(8),
+.productos-tabla td:nth-child(8),
+.productos-tabla th:nth-child(8),
+.productos-tabla td:nth-child(1) {
+    width: 50px;
+    text-align: center;
+    padding: 8px;
+}
+
+.productos-tabla input[type="checkbox"] {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+/* === ÍCONOS === */
+.fa-star-o,
+.fa-trash {
+    font-size: 18px;
+}
+
+.icono-estrella {
+    color: #ccc;
+    cursor: pointer;
+}
+
+.icono-estrella:hover {
+    color: gold;
+}
+
+.icono-borrar {
+    color: #d9534f;
+    cursor: pointer;
+}
+
+.icono-borrar:hover {
+    color: #c9302c;
+}
+
+/* === SWITCH (CATÁLOGO) === */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 22px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+/* === BARRA DE FILTROS === */
+.filtros-barra {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    height: 60px; /* 👈 Altura definida, ajusta según tus necesidades */
+    box-sizing: border-box;
+}
+
+
+.filtros-buscador {
+    flex: 0;
+  
+}
+
+.filtros-buscador input {
+    width: 40%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.filtro-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    padding: 0px 12px; /* 👈 Menor altura */
+    background-color: #f1f1f1;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+
+
+.filtro-select {
+    border: none;
+    background: none;
+    font-size: 14px;
+}
+
+/* === BOTÓN AGREGAR PRODUCTO === */
+.boton-agregar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.boton-agregar:hover {
+    background-color: #45a049;
+}
+
+.producto-imagen {
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: 50px; /* Mantén la relación de aspecto */
+    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente si es más grande que el contenedor */
+    border-radius: 5px; /* Opción para redondear las esquinas de la imagen */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .modal-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .btn-confirmar {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-cancelar {
+    background-color: #bdc3c7;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

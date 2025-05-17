@@ -1,0 +1,82 @@
+/* Sidebar general */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px; /* Puedes ajustar según necesidad */
+  height: 100vh;
+  background-color: #363F4D; /* Fondo oscuro elegante */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navegación dentro de la barra */
+.sidebar-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Lista de ítems */
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Cada item */
+.sidebar-nav li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Enlace */
+.sidebar-nav a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Contenedor del ícono + texto */
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+  padding: 0.5rem 0;
+}
+
+/* Íconos */
+.sidebar-item img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1); /* Iconos blancos */
+  margin-bottom: 5px;
+}
+
+/* Texto */
+.sidebar-item span {
+  font-size: 0.75rem;
+  color: white;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* Hover efecto */
+.sidebar-item:hover {
+  transform: scale(1.1);
+  background-color: #2a2a40;
+  border-radius: 10px;
+}

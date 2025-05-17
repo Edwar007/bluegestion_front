@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  background-color: #D9D9D9;
+}
+
+.layout-container {
+  display: flex;
+  height: 100vh;
+ 
+}
+
+.layout-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-page-content {
+  flex: 1;
+  padding: 1rem;
+  background-color: #D9D9D9;
+  position: relative;  /* 👈 esto es seguro */
+  z-index: 1;          /* 👈 asegura que esté detrás del topbar */
+
+}
+
+.main-content {
+  margin-left: 100px; /* mismo ancho que el sidebar */
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 100px); /* ocupa el resto del ancho */
+  overflow: visible;
+  margin-top: 30px; /* 👈 Lo mismo si usas este en lugar del anterior */
+}
+
+.page-content {
+  flex: 1;
+  
+  padding: 80px 20px 20px 20px; /* top = altura del Topbar */
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #D9D9D9;
+}

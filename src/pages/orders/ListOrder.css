@@ -1,0 +1,254 @@
+.listado-ordenes-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    padding: 0px 0% 0% 0%;
+    box-sizing: border-box;
+}
+
+
+/* Tabla de órdenes */
+.ordenes-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+    table-layout: fixed;
+}
+
+.ordenes-tabla th,
+.ordenes-tabla td {
+    text-align: left;
+    padding: 14px 12px;
+    font-size: 14px;
+    color: #000000;
+    word-wrap: break-word;
+}
+
+/* Encabezado de tabla */
+.ordenes-tabla thead th {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 2.5px solid #000000;
+}
+
+/* Filas del cuerpo */
+.ordenes-tabla tbody td {
+    border-bottom: 1.5px solid #333333;
+}
+
+.ordenes-tabla tbody tr:hover {
+    background-color: #e1e0e0;
+}
+
+
+.filtro-item:hover {
+    background-color: #efefef;
+}
+
+/* Tabla de órdenes */
+.ordenes-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+    table-layout: fixed;
+}
+
+.ordenes-tabla th,
+.ordenes-tabla td {
+    text-align: left;
+    padding: 14px 12px;
+    font-size: 14px;
+    color: #000000;
+    word-wrap: break-word;
+}
+
+/* Encabezado de tabla */
+.ordenes-tabla thead th {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 2.5px solid #000000;
+}
+
+/* Filas del cuerpo */
+.ordenes-tabla tbody td {
+    border-bottom: 1.5px solid #333333;
+}
+
+.ordenes-tabla tbody tr:hover {
+    background-color: #e1e0e0;
+}
+
+/* Estado con icono de reloj y color según el estado */
+.estado-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #333;
+    /* Texto negro para todos */
+    padding: 3px 4px 7px;
+    /* Reducimos el padding para hacerlo más compacto */
+    border-radius: 8px;
+    background-color: #ffffff;
+    /* Fondo blanco */
+    border: 1px solid #ccc;
+    max-width: 150px;
+    /* Reducimos el ancho máximo */
+}
+
+/* Icono de reloj */
+.estado-item i {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* Estado Pendiente */
+.estado-pendiente {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Estado Pendiente */
+.estado-pendiente i {
+    background-color: #ccc;
+    /* Reloj gris para pendiente */
+    color: white;
+}
+
+.estado-pendiente .estado-texto {
+    color: #333;
+}
+
+/* Estado Confirmado */
+.estado-confirmado {
+    background-color: #f9f9f9;
+    color: #4CAF50;
+}
+
+/* Estado Confirmado */
+.estado-confirmado i {
+    background-color: #24be29;
+    /* Reloj verde para confirmado */
+    color: white;
+}
+
+.estado-confirmado .estado-texto {
+    color: #333;
+}
+
+/* Estado Cancelado */
+.estado-cancelado {
+    background-color: #f9f9f9;
+    color: #d9534f;
+}
+
+/* Estado Cancelado */
+.estado-cancelado i {
+    background-color: #d9534f;
+    /* Reloj rojo para cancelado */
+    color: white;
+}
+
+.estado-cancelado .estado-texto {
+    color: #333;
+}
+
+/* Texto */
+.estado-texto {
+    color: #333;
+    /* Texto negro */
+}
+
+.tabla-ordenes-contenedor {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 180px); /* Ajusta según el alto de filtros/topbar */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Fondo del modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Contenedor del contenido del modal */
+.modal-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Título del modal */
+.modal-content h3 {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Tabla de productos en el modal */
+.tabla-productos-modal {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabla-productos-modal th,
+.tabla-productos-modal td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabla-productos-modal thead th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Imagen de producto */
+.product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Botón de cerrar modal */
+.cerrar-modal-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.cerrar-modal-btn:hover {
+    background-color: #c9302c;
+}
