@@ -3,8 +3,12 @@ import Logo from "../../assets/icons/LogoBlueGestion.png";
 import "../auth/Login.css";
 import { useRegisterUser } from "./useRegisterUser";
 import { useLoginUser } from "./useLoginUser";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [isRegistering, setIsRegistering] = useState(false);
 
   const {
@@ -88,7 +92,7 @@ const Login = () => {
         return;
       }
 
-      handleLogin(e, email, password);
+      handleLogin(e, email, password,navigate);
     }
   };
 

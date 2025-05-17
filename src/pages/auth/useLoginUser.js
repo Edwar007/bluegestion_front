@@ -6,8 +6,8 @@ import { jwtDecode } from "jwt-decode";
 export const useLoginUser = () => {
   const [message, setMessage] = useState("");
   const baseUrl = process.env.REACT_APP_BASE_URL;
-  const baseUrlFront = process.env.REACT_APP_BASE_URL_FRONT;
-  const handleLogin = async (e, email, password) => {
+
+  const handleLogin = async (e, email, password, navigate) => {
     e.preventDefault();
 
     try {
@@ -20,15 +20,12 @@ export const useLoginUser = () => {
       const data = await response.json();
 
       if (response.ok && data.token) {
-        // Guardar el token en localStorage
         localStorage.setItem("token", data.token);
+        const decoded = jwtDecode(data.token);
+        localStorage.setItem("userId", decoded.userId);
 
-        // (Opcional) Decodificar para obtener el userId y guardarlo si lo necesitas
-        const decoded = jwtDecode(data.token); // 👈
-        localStorage.setItem("userId", decoded.userId); // 👈
-
-        // Redireccionar
-        window.location.href = `${baseUrlFront}/home`;
+        // Redirección correcta con React Router
+        navigate("/home");
       } else {
         setMessage("Correo o contraseña incorrectos");
       }
@@ -39,3 +36,4 @@ export const useLoginUser = () => {
 
   return { handleLogin, message };
 };
+
