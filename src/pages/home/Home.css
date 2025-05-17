@@ -1,0 +1,36 @@
+.home-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  /* Aseguramos que el contenido principal esté separado del sidebar */
+  .home-container {
+    flex: 1;
+    background-color: #1D2443; /* azul fuerte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-content {
+    text-align: center;
+    color: white;
+  }
+  
+  .home-logo {
+    width: 400px;
+    height: auto;
+    margin-bottom: 5px;
+  }
+  
+  .home-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .home-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
