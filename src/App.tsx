@@ -14,8 +14,14 @@ import ListadoClientes from "./pages/clients/ListClient";
 import ListadoUsuarios from "./pages/users/ListadoUsuarios";
 import Config from "./pages/clients/Config";
 
+import HomeVendedor from "./pages/home/HomeVendedor";
+import CreateOrderVendedor from "./pages/products/vendedor/ProductsVendedor";
+import VenderProductosVendedor from "./pages/orders/CreateOrderVendedor";
+import ConfigVendedor from "./pages/clients/ConfigVendedor";
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'font-awesome/css/font-awesome.min.css';
+
 
 function App() {
   return (
@@ -25,17 +31,24 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
 
-        {/* Rutas privadas */}
-        <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
-        <Route path="/crear-orden" element={<PrivateRoute><CreateOrder /></PrivateRoute>} />
-        <Route path="/registrar-productos" element={<PrivateRoute><RegistrarProductos /></PrivateRoute>} />
-        <Route path="/registrar-clientes" element={<PrivateRoute><RegistrarClientes /></PrivateRoute>} />
-        <Route path="/vender-productos" element={<PrivateRoute><VenderProductos /></PrivateRoute>} />
-        <Route path="/listado-ordenes" element={<PrivateRoute><ListadoOrdenes /></PrivateRoute>} />
-        <Route path="/listado-productos" element={<PrivateRoute><ListadoProductos /></PrivateRoute>} />
-        <Route path="/listado-clientes" element={<PrivateRoute><ListadoClientes /></PrivateRoute>} />
-        <Route path="/listado-usuarios" element={<PrivateRoute><ListadoUsuarios /></PrivateRoute>} />
-        <Route path="/configuracion" element={<PrivateRoute><Config /></PrivateRoute>} />
+        {/* Rutas privadas vendedor*/}
+        <Route path="/home-v" element={<PrivateRoute allowedRoles={["Vendedor"]}><HomeVendedor/></PrivateRoute>} />
+        <Route path="/crear-orden-v" element={<PrivateRoute allowedRoles={["Vendedor"]}><CreateOrderVendedor /></PrivateRoute>} />
+        <Route path="/vender-productos-v" element={<PrivateRoute allowedRoles={["Vendedor"]}><VenderProductosVendedor /></PrivateRoute>} />
+        <Route path="/configuracion-v" element={<PrivateRoute allowedRoles={["Vendedor"]}><ConfigVendedor /></PrivateRoute>} />
+
+
+        {/* Rutas privadas Administrador */}
+        <Route path="/home" element={<PrivateRoute allowedRoles={["Admin"]}><Home /></PrivateRoute>} />
+        <Route path="/crear-orden" element={<PrivateRoute allowedRoles={["Admin"]}><CreateOrder /></PrivateRoute>} />
+        <Route path="/registrar-productos" element={<PrivateRoute allowedRoles={["Admin"]}><RegistrarProductos /></PrivateRoute>} />
+        <Route path="/registrar-clientes" element={<PrivateRoute allowedRoles={["Admin"]}><RegistrarClientes /></PrivateRoute>} />
+        <Route path="/vender-productos" element={<PrivateRoute allowedRoles={["Admin"]}><VenderProductos /></PrivateRoute>} />
+        <Route path="/listado-ordenes" element={<PrivateRoute allowedRoles={["Admin"]}><ListadoOrdenes /></PrivateRoute>} />
+        <Route path="/listado-productos" element={<PrivateRoute allowedRoles={["Admin"]}><ListadoProductos /></PrivateRoute>} />
+        <Route path="/listado-clientes" element={<PrivateRoute allowedRoles={["Admin"]}><ListadoClientes /></PrivateRoute>} />
+        <Route path="/listado-usuarios" element={<PrivateRoute allowedRoles={["Admin"]}><ListadoUsuarios /></PrivateRoute>} />
+        <Route path="/configuracion" element={<PrivateRoute allowedRoles={["Admin"]}><Config /></PrivateRoute>} />
       </Routes>
     </Router>
   );

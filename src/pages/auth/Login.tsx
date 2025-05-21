@@ -5,7 +5,6 @@ import { useRegisterUser } from "./useRegisterUser";
 import { useLoginUser } from "./useLoginUser";
 import { useNavigate } from "react-router-dom";
 
-
 const Login = () => {
   const navigate = useNavigate();
 
@@ -48,7 +47,9 @@ const Login = () => {
       }
 
       if (!numbersRegex.test(document) || parseInt(document) < 0) {
-        alert("El número de documento debe ser un número positivo y sin letras.");
+        alert(
+          "El número de documento debe ser un número positivo y sin letras."
+        );
         return;
       }
 
@@ -78,7 +79,6 @@ const Login = () => {
       }
 
       handleRegister(e, handleSuccessRegister);
-
     } else {
       const { email, password } = formData;
 
@@ -92,7 +92,7 @@ const Login = () => {
         return;
       }
 
-      handleLogin(e, email, password,navigate);
+      handleLogin(e, email, password, navigate);
     }
   };
 
@@ -125,7 +125,9 @@ const Login = () => {
         {/* Panel Derecho */}
         <div className="auth-panel right-panel">
           <div className="form-content">
-            <h2>{isRegistering ? "Crear Cuenta" : "Iniciar Sesión"}</h2>
+            <h2 className={isRegistering ? "title-register" : ""}>
+              {isRegistering ? "Crear Cuenta" : "Iniciar Sesión"}
+            </h2>
 
             <form onSubmit={handleSubmit}>
               {isRegistering && (
@@ -212,7 +214,7 @@ const Login = () => {
                 </a>
               )}
 
-              <button type="submit" className="submit-btn">
+              <button type="submit" className={`submit-btn ${isRegistering ? "register-btn" : ""}`}>
                 {isRegistering ? "Registrarse" : "Iniciar sesión"}
               </button>
 
