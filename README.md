@@ -42,10 +42,10 @@ Sigue los siguientes pasos para correr el proyecto de forma local:
 
 ```bash
 # 1. Clona el repositorio
-git clone https://github.com/tuusuario/nombre-del-repo.git
+git clone https://github.com/Edwar007/bluegestion_front.git
 
 # 2. Entra en el directorio del proyecto
-cd nombre-del-repo
+cd bluegestion_front
 
 # 3. Instala las dependencias
 npm install
