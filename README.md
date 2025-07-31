@@ -56,6 +56,8 @@ npm start
 ## 👨‍💻 Autor
 
 **Edwar Aguiar**  
-Estudiante de Ingeniería de Sistemas con interés en el desarrollo frontend y en la creación de soluciones web intuitivas y funcionales.
+Ingeniero de Sistemas egresado de la Universidad Central. Me especializo en el desarrollo backend, con un fuerte dominio de **Java** y el framework **Spring Boot**, así como en la gestión de bases de datos relacionales. Aunque mi enfoque principal es el backend, también he trabajado en el desarrollo frontend con tecnologías como **Angular** y, en menor medida, **React**, lo cual me permite desenvolverme como un desarrollador **full stack** en distintos tipos de proyectos. Este repositorio es una muestra de mis habilidades en la parte frontend.
+
+
 
 🔗 [Visita mi perfil en LinkedIn](www.linkedin.com/in/edwar-aguiar)
